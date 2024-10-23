@@ -1,0 +1,173 @@
+@font-face{
+	font-family: 'RobotoBold';
+	src: url('./Fonts/Roboto-Black.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'RobotoLight';
+	src: url('./Fonts/Roboto-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	font-family: 'RobotoBold';
+	background-image: url('./final-background.png');
+	background-size: cover;
+	background-repeat: repeat;
+	margin: 0;
+}
+
+#screen{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+	background-color: #372648;
+	background: -moz-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(55,38,72,0.4108018207282913) 9%, rgba(55,38,72,0.8365721288515406) 18%, rgba(55,38,72,0.9850315126050421) 32%, rgba(55,38,72,1) 50%, rgba(55,38,72,0.99) 68%, rgba(55,38,72,0.84) 82%, rgba(55,38,72,0.41) 91%, rgba(255,255,255,0) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(55,38,72,0.4108018207282913) 9%, rgba(55,38,72,0.8365721288515406) 18%, rgba(55,38,72,0.9850315126050421) 32%, rgba(55,38,72,1) 50%, rgba(55,38,72,0.99) 68%, rgba(55,38,72,0.84) 82%, rgba(55,38,72,0.41) 91%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(55,38,72,0.4108018207282913) 9%, rgba(55,38,72,0.8365721288515406) 18%, rgba(55,38,72,0.9850315126050421) 32%, rgba(55,38,72,1) 50%, rgba(55,38,72,0.99) 68%, rgba(55,38,72,0.84) 82%, rgba(55,38,72,0.41) 91%, rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+
+.grid-wrapper{
+    position: relative;
+}
+
+.grid{
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 3.5%;
+    padding: 3.5%;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 10px;
+	border: 3px solid #9c93a6;
+	background-color: #372648;
+}
+
+.grid div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	font-size: 2.4vw;
+	border-radius: 7px;
+	cursor: pointer;
+    touch-action: manipulation;
+}
+
+.empty{
+	background-color: #372648 !important;
+}
+
+button{
+	font-family: 'RobotoLight';
+	width: 10vw;
+    padding: 6px 0;
+	margin: 1% auto;
+	font-size: 1.4vw;
+	color: #ffffff;
+	background-color: #372648;
+	border: 3px solid #9c93a6;
+	border-radius: 100px;
+	outline: none;
+	cursor: pointer;
+    touch-action: manipulation;
+}
+
+.shuffleBtn{
+	display: inline-block;
+}
+
+.playBtn{
+	display: none;
+}
+
+button:hover{
+	box-shadow: 1px 1px 5px 1px grey;
+}
+
+.win{
+	position: absolute;
+    height: 45%;
+    left: 61.5%;
+    right: -53.5%;
+    top: 50%;
+	transform: translate(-62.5%, -50%);
+	border-radius: 7px;
+	background-color: #372648;
+	border: 3px solid #9c93a6;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	font-size: 4vw;
+	color: white;
+}
+
+@media screen and (max-width: 1000px){
+    .grid{
+        width: 37vw;
+        height: 37vw;
+    }
+
+    .grid div{
+        font-size: 3.5vw;
+    }
+
+    button{
+        font-size: 2.5vw;
+        width: 16vw;
+        margin: 2% auto;
+    }
+
+    .win{
+        font-size: 4.8vw;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .grid{
+        height: 50vw;
+        width: 50vw;
+    }
+
+    .grid div{
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .grid{
+        width: 65vw;
+        height: 65vw;
+    }
+
+    .grid div{
+        font-size: 5vw;
+    }
+
+    button{
+        font-size: 3.5vw;
+        width: 25vw;
+        margin: 4% auto;
+    }
+
+    .win{
+        font-size: 8vw;
+    }
+}
