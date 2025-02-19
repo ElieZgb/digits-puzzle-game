@@ -1,16 +1,4 @@
-@font-face{
-	font-family: 'RobotoBold';
-	src: url('./Fonts/Roboto-Black.ttf');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face{
-	font-family: 'RobotoLight';
-	src: url('./Fonts/Roboto-Light.ttf');
-	font-weight: normal;
-	font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
@@ -22,7 +10,8 @@ body{
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+/Edge */
-	font-family: 'RobotoBold';
+	font-family: 'Roboto';
+  font-weight: bold;
 	background-image: url('./final-background.png');
 	background-size: cover;
 	background-repeat: repeat;
@@ -76,9 +65,10 @@ body{
 }
 
 button{
-	font-family: 'RobotoLight';
+	font-family: 'Roboto';
+  font-weight: 300;
 	width: 10vw;
-    padding: 6px 0;
+  padding: 6px 0;
 	margin: 1% auto;
 	font-size: 1.4vw;
 	color: #ffffff;
@@ -87,7 +77,7 @@ button{
 	border-radius: 100px;
 	outline: none;
 	cursor: pointer;
-    touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 .shuffleBtn{
@@ -117,6 +107,16 @@ button:hover{
 	align-items: center;
 	font-size: 4vw;
 	color: white;
+}
+
+.credits{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #f1f1f1;
+  padding: 7px 15px;
+  border-radius: 10px;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1000px){
